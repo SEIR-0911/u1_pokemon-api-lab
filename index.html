@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+    <div class="card">
+        <form>
+            <div class="inputDiv">
+                <input type="text"  value="" id="inputBar">
+                <input type="button"  value="Search" id="searchButton">
+            </div>
+            <div id="errorMessage" style="color: red;" class="errorMessage"></div>
+        </form>
+        <div>
+            <h1 id="name"></h1> <h2 id="number"></h2>
+            <div id="pokemonImage" class="images"></div>
+            <div id="abilityDiv" class="abilities"></div> 
+            <div id="typeDiv" class="types"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
