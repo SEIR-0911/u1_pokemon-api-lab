@@ -4,66 +4,39 @@
 let button = document.querySelector("#searchButton")
 
 button.addEventListener('click', async () => {
-
-    let pokemonName = document.querySelector("#pokemonName")
-    let pokemonImage = document.querySelector("#pokemonImage")
-    //where does this need to be scoped?
-    let textInput = "ditto"
-    //= document.querySelector("#inputBar").value
-    //Axios call goes here
-    let response = await axios.get(
+    let textInput = document.querySelector("#inputBar").value
+    let response = await axios.get(     //Axios call
         `https://pokeapi.co/api/v2/pokemon/${textInput.toLowerCase()}/`
     )
-    console.log(response.data)
+    console.log(response.data);//just to see the response
 
     let pokemonTable = document.getElementById("pokemon-table");
     let displayContent = `
+    <div id="pokemon-table-style">
     <table >
         <tr >
             <th>Name</th>
             <th>Type</th>
-            <th>Regon</th>
+            <th>Weight</th>
             <th>Image</th>
             <th>Abilities</th>       
         </tr>
         <tr>
             <td>${response.data.name}</td>
-            <td></td>
-            <td></td>
+            <td>`
+
+    response.data.types.forEach(item => displayContent += `${item.type.name}<br/>`);
+    displayContent += `</td>
+    <td>${response.data.weight}</td>
             <td><img src="${response.data.sprites.back_default}"/></td>
             <td>`
     response.data.abilities.forEach(element => displayContent += `${element.ability.name}<br/>`)
     displayContent += `</td>`;//closing abilites cell
     displayContent += //closing data table
         `</tr>
-    </table>`
+    </table></div>`
     pokemonTable.innerHTML = displayContent;
 
 
 
 });
-
-
-/*
-button.addEventListener("click", async () => {
-    let pokemonName = document.querySelector("#pokemonName");
-    let pokemonImage = document.querySelector("#pokemonImage");
-    //where does this need to be scoped?
-    let textInput = document.querySelector("#inputBar").value;
-    //Axios call goes here
-    // textInput = textInput;
-    // console.log(textInput)
-    let response1 = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon/${textInput.toLowerCase()}/`
-    );
-    let myID = response1.data.id;
-    let response2 = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon/${myID}/encounters/`
-    );
-    // console.log(response1.data);
-    response2.data.forEach((element, index) => {
-        console.log(element.version_details[index])
-    });
-
-});
-*/

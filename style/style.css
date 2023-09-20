@@ -1,6 +1,8 @@
 body {
-  text-align: center;
-  padding: 20px 0px 200px 0px;
+    display: flex;
+    padding: 20px 0px 200px 0px;
+    align-items: center;
+    flex-direction: column;
 }
 #main-img {
   width: 400px;
@@ -13,13 +15,24 @@ h1 {
   color: cadetblue;
   font-size: x-large;
 }
+#inputBar {
+  border: solid 2px salmon;
+  border-radius:10em;
+}
 #pokemon-table {
   display: block;
 }
-
+#searchButton {
+  width: 100px;
+  color: white;
+  background-color: rgb(255, 114, 138);
+  border-radius: 10%;
+}
 table,
 th,
 td {
   border: 2px solid pink;
   text-align: center;
+  text-transform: capitalize;
+  padding: 5px;
 }
