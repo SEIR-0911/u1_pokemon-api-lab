@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke-Pic Generator</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src = "script.js"></script> 
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <header>
+        <img id = "logo" src="pokeLogo.png">
+        <p>Have you ever been here before? You hear your buddy talk about this awesome pokemon they fought against. They tell you its name, but they suck at describing it. You'd love to go catch one, but how do you know what to look for?
+        </p>
+        <p>Worry no more! With our Poke-Pic Generator (patent pending), you'll never have to wrestle a description out of your friend ever again! Simply enter the Pokemon's name, and let our extensive database do the rest!</p>
+    </header>
+    <div id = "userInput">
+        <input type = "text" value = "" placeholder = "Enter Pokemon Name" id = "uInput">
+        <button id = "generate">Get Pic</button>
+    </div>
+    <div id="pokeData">
+        <h3 id = "pokeName"></h3>
+        <div id="pokeImg"></div>
+        <h3 id="ableHeader"></h3>
+        <ul id = "ableList">
+        </ul>
+    </div>
+    
+</body>
+</html>
