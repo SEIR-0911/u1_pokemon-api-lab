@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./assets/PokemonBG.jpeg");
+}
+
+form {
+    display: center;
+}
+
+h2, img, div {
+    width: 200px;
+}
+
+h2, div {
+    background-color: rgb(197, 168, 21);
+    font-family: 'IBM Plex Sans';
+}
+
+img {
+    background-color: white;
+}
+
+#pokemonName {
+    background-color: white;
+    margin-bottom: 0;
+    text-align: center;
+    height: 3em;
+    font-size: 2em;
+    color: rgb(74, 74, 212)
+}
