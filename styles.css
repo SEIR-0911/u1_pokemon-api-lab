@@ -1,0 +1,132 @@
+button {
+    margin: 5px;
+}
+form {
+    display: flex;
+    margin: 3px;
+}
+
+.gameboy {
+    background-color: gold;
+    width: 400px;
+    height: 550px;
+    padding-top: 1px;
+    margin-top: 30px;
+    border-radius: 1.5%;
+    box-shadow: 10px 10px;
+}
+img {
+    position: absolute;
+    left: 260px;
+    justify-content: center;
+    margin: auto;
+}
+.screen {
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    width: 80%;
+    height: 75%;
+    margin: auto;
+}
+.border {
+    background-color: black;
+    padding-top: 10%;
+    height: 40%;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 3%;
+    margin: auto;
+}
+.logo {
+    display: flex;
+    align-content: center;
+    background-color: black;
+    background-size: 20px;
+    width: 60%;
+    font-size: 23px;
+    
+    margin: auto;
+    height: 25%;
+}
+.logo2 {
+    color:gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+.logo3 {
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.ud-direction {
+    position: absolute;
+    background-color: blueviolet;
+    margin-top: 90px;
+    left: 80px;
+    width: 18px;
+    height: 65px;
+    box-shadow: 3px 3px;
+    box-shadow: 20%;
+}
+.lr-direction {
+    position: absolute;
+    top: 453px;
+    left: 56.5px;
+    box-shadow: 3px 0px;
+    background-color: blueviolet;
+    width: 65px;
+}
+.b-button {
+    position: absolute;
+    left: 250px;
+    top: 450px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 6px;
+    box-shadow: 3px 3px;
+    background-color: green;
+} 
+.a-button {
+    position: absolute;
+    left: 300px;
+    top: 425px;
+    text-align: center;
+    padding-top: 6px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    box-shadow: 3px 3px;
+    background-color: red;
+}
+#poke2 {
+    position: absolute;
+    top: 120px;
+    left: 40px;
+    height: 200px;
+}
+
+
+
+
+
+
+
+.magenta {
+    color: hotpink;
+}
+.purple {
+    color: purple;
+}
+.green {
+    color: greenyellow;
+}
+.yellow {
+    color: yellow;
+}
+.turquoise {
+    color: turquoise;
+}
