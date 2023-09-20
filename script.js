@@ -1,4 +1,5 @@
 
+//https://pokeapi.co/
 
 let button = document.querySelector("#searchButton")
 
@@ -14,38 +15,32 @@ button.addEventListener('click', async () => {
         `https://pokeapi.co/api/v2/pokemon/${textInput.toLowerCase()}/`
     )
     console.log(response.data)
-    //console.log(response.data.abilities[0].ability.name)
-
-    // response.data.abilities.forEach(element => {
-    //     console.log("ability", element.ability.name)
-
-    // });
 
     let pokemonTable = document.getElementById("pokemon-table");
-    pokemonTable.innerHTML = `
+    let displayContent = `
     <table >
-    <tr >
-        <th>Name</th>
-        <th>Type</th>
-        <th>Regon</th>
-        <th>Image</th>
-        <th>Abilities</th>
-        
-    </tr>
-    <tr>
-        <td>${response.data.name}</td>
-        <td></td>
-        <td></td>
-        <td><img src="${response.data.sprites.back_default}"/></td>
-        <td>` 
-    
-        response.data.abilities.forEach( element => {
-                ${element.ability.name}
-            });
-        });
-       </td>
-    </tr>
+        <tr >
+            <th>Name</th>
+            <th>Type</th>
+            <th>Regon</th>
+            <th>Image</th>
+            <th>Abilities</th>       
+        </tr>
+        <tr>
+            <td>${response.data.name}</td>
+            <td></td>
+            <td></td>
+            <td><img src="${response.data.sprites.back_default}"/></td>
+            <td>`
+    response.data.abilities.forEach(element => displayContent += `${element.ability.name}<br/>`)
+    displayContent += `</td>`;//closing abilites cell
+    displayContent += //closing data table
+        `</tr>
     </table>`
+    pokemonTable.innerHTML = displayContent;
+
+
+
 });
 
 
