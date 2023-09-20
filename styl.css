@@ -1,0 +1,49 @@
+h1 {
+    display: flex;
+    justify-content: center;
+
+}
+
+#formone {
+    display: flex;
+    justify-content: center;
+    color: blueviolet;
+}
+#formone:hover {
+    background-color: blueviolet;
+}
+
+#pic {
+    display: flex;
+    justify-content: flex-start;
+    width: 300px;
+    height: 200px;
+    
+    
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    
+}
+
+body{
+    background-color: black;
+    color: rgb(100, 152, 197);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 3px solid red;
+}
+
+#abilities {
+    padding-bottom: 10px;
+}
+
+#moves {
+    display: flex;
+    
+}
+
+#text {
+    background-color: grey;
+}
