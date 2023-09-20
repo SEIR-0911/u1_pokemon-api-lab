@@ -1,0 +1,29 @@
+body {
+  text-align: center;
+  padding: 20px 0px 200px 0px;
+}
+#main-img {
+  width: 400px;
+}
+h1 {
+  color: purple;
+  font-size: xxx-large;
+}
+.lable {
+  color: cadetblue;
+  font-size: x-large;
+}
+#pokemon-table {
+ display: block;
+}
+
+table,
+th,
+td {
+  border: 2px solid pink;
+  text-align: center;
+}
+
+.pokemon-table-cell {
+
+}
