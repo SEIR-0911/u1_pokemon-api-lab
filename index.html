@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Lab API</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+    <h1>Pokemon Lab API</h1>
+    <form>
+    <input type="text"  value="" placeholder="Choose your pokemon!"  id="inputBar">
+    <input type="button"  value="Click here" id="searchButton">
+    </form>
+
+    <h2 id="pokemonName"></h2>
+    <img id="pokemonImageFront"/>
+    <img id="pokemonImageBack"/>
+    </header>
+    <div class="allStats">
+        <div class="stats" id="hpStat"></div>
+        <div class="stats" id="attStat"></div>
+        <div class="stats" id="defStat"></div>
+        <div class="stats" id="aspStat"></div>
+        <div class="stats" id="dspStat"></div>
+        <div class="stats" id="spdStat"></div>
+    </div>
+    
+
+
+</body>
+</html>
