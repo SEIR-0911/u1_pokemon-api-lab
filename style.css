@@ -1,0 +1,52 @@
+body {
+    /* background-color: white;
+    background-color: rgba(255, 123, 0, 0.661);
+    background-color: skyblue;
+    background-color: purple;
+    background-color: brown;
+    background-color: rgb(178, 87, 87);
+    background-color: limegreen;
+    background-color: rgba(198, 12, 198, 0.592);
+    background-color: silver;
+    background-color: red;
+    background-color: blue;
+    background-color: green;
+    background-color: yellow;
+    background-color: hotpink;
+    background-color: lightblue;
+    background-color: rgb(221, 72, 221);
+    background-color: rgb(69, 69, 69);
+    background-color: pink;
+    background-color: black;
+    background-color: rgb(91, 91, 91); */
+}
+
+
+
+
+
+
+
+
+
+
+normal: white,
+fighting:Red/Brown,
+flying:Sky Blue,
+poison:Purple,
+ground:Brown,
+rock:Grey/Brown,
+bug:Lime Green,
+ghost:light transparent purple,
+steel:silver,
+fire:red,
+water:blue,
+grass:green,
+electric:yellow,
+psychic:hot pink,
+ice:light blue,
+dragon:light purple,
+dark:light black,
+fairy:pink,
+unknown:black,
+shadow:dark grey,
