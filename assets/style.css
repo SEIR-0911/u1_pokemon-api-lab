@@ -1,0 +1,62 @@
+/* styles.css */
+body {
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#searchButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.pokemon-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon-info {
+    text-align: center;
+}
+
+.pokemon-image {
+    max-width: 200px;
+}
+
+.pokemon-stats h3 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.pokemon-stats ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pokemon-stats li {
+    margin: 5px 0;
+}
