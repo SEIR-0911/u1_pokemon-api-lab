@@ -20,48 +20,57 @@ button.addEventListener('click', async () => {
 	let pokemonTypes = document.querySelector('#pokemonTypes')
 	let textInput = document.querySelector('#inputBar').value
 	console.log(textInput)
-
-	//Axios call goes here
-	//remember to use Async and Await!
-	let result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${textInput}`)
-	console.log(result.data)
-	pokemonContainer.style.display = 'block'
-	//DOM Setters go here
-	if (
-		result &&
-		result.data.sprites &&
-		result.data.sprites.other &&
-		result.data.sprites.other.showdown &&
-		result.data.sprites.other.showdown.front_default
-	) {
-		pokemonName.textContent =
-			result.data.name.charAt(0).toUpperCase() + //Will make first letter of name Upper case
-			result.data.name.slice(1).toLowerCase() //Rest of the name will be lower case
-		pokemonImage.setAttribute(
-			'src',
-			result.data.sprites.other.showdown.front_default
+	//axios call is executed first	| typically used for ** JSON **
+	try {
+		let result = await axios.get(
+			`https://pokeapi.co/api/v2/pokemon/${textInput}`
 		)
-	} else {
+		console.log(result.status)
+		pokemonContainer.style.display = 'block'
+		//DOM Setters go here
+		if (
+			result &&
+			result.data.sprites &&
+			result.data.sprites.other &&
+			result.data.sprites.other.showdown &&
+			result.data.sprites.other.showdown.front_default
+		) {
+			pokemonName.textContent =
+				result.data.name.charAt(0).toUpperCase() + //Will make first letter of name Upper case
+				result.data.name.slice(1).toLowerCase() //Rest of the name will be lower case
+			pokemonImage.setAttribute(
+				'src',
+				result.data.sprites.other.showdown.front_default
+			)
+			//setting height
+			if (result.data.game_indices) {
+				pokemonHeight.textContent = 'Height: ' + result.data.height + `'0"`
+				console.log(result.data.height)
+			}
+			//different types
+			if (result.data.types && result.data.types.length > 0) {
+				let numTypes = 'Type(s): '
+				for (let i = 0; i < result.data.types.length; i++) {
+					numTypes += result.data.types[i].type.name
+					if (i < result.data.types.length - 1) {
+						numTypes += ',  '
+					}
+				}
+				pokemonTypes.textContent = numTypes
+			} else {
+				pokemonTypes.textContent = 'Type(s): Unknown'
+			}
+		}
+	} catch (error) {
+		//executed if code in try statement has an exception
+		console.log(error)
 		console.log('Pokemon not found')
 		pokemonName.textContent = 'Pokemon not found'
 		pokemonImage.setAttribute('src', '')
-	}
 
-	if (result.data.game_indices) {
-		pokemonHeight.textContent = 'Height: ' + result.data.height + `'0"`
-		console.log(result.data.height)
-	}
-
-	if (result.data.types && result.data.types.length > 0) {
-		let numTypes = 'Type(s): '
-		for (let i = 0; i < result.data.types.length; i++) {
-			numTypes += result.data.types[i].type.name
-			if (i < result.data.types.length - 1) {
-				numTypes += ',  '
-			}
-		}
-		pokemonTypes.textContent = numTypes
-	} else {
-		pokemonTypes.textContent = 'Type(s): Not Available'
+		const hideInfo = [pokemonImage, pokemonHeight, pokemonTypes]
+		hideInfo.forEach((info) => {
+			info.style.display = 'none'
+		})
 	}
 })
