@@ -1,11 +1,13 @@
 body {
 	background-color: red;
-	text-align: center;
+	flex-direction: column-reverse;
+	justify-content: space-between;
 }
 
 h1 {
 	color: yellow;
 	font-size: 100px;
+	text-align: center;
 }
 
 .pokedexContainer {
@@ -14,7 +16,7 @@ h1 {
 	align-items: center;
 	flex-direction: column;
 	background-color: lightgrey;
-	border: 3px solid black;
+	border: 3px black;
 }
 
 .pokedexInput {
